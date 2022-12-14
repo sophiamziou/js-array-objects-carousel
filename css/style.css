@@ -40,7 +40,7 @@
     object-fit: cover;
 }
 
-.item, .titolo, .descrizione{
+.item{
     display: none;
 }
 
@@ -78,7 +78,7 @@
     background-color: rgba(174, 174, 174, 1);   
 }
 
-.item.active, .titolo.active, .descrizione.active{
+.item.active{
     display: block;
 }
 
