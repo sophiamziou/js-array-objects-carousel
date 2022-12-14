@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 50vw;
+    height: 50vh;
+    position:relative;
+}
+
+.thumbnails{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    background: black ;
+}
+
+.thumb{
+    width: 100%;
+    height: calc(100% / 5);
+    opacity: 0.5;
+}
+
+.thumb.active{
+    opacity: 1;
+}
+
+.thumb img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.item, .titolo, .descrizione{
+    display: none;
+}
+
+.item-slider, .item, img{
+    height: 100%
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow{
+    position: absolute;
+    width: 40px;
+    background-color: rgba(174, 174, 174, 0.509);
+    border-radius: 50px;
+    font-weight: 800; 
+    left: 50%;
+    font-size: 30px;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.next{
+    top: 5px; 
+}
+
+.prev{
+    bottom: 5px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(174, 174, 174, 1);   
+}
+
+.item.active, .titolo.active, .descrizione.active{
+    display: block;
+}
+
+.circles-container{
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(174, 174, 174, 0.509);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.circle.active, .circle:hover{
+    background-color: rgba(174, 174, 174, 1); 
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 20px;
+}
+
+button{
+    padding: 10px 15px;
+    margin: 20px;
+    border: none;
+    background-color: cornflowerblue;
+    color: beige;
+}
+
+.info{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    text-align: right;
+    color: white;
+    padding-left: 30px;
+}
