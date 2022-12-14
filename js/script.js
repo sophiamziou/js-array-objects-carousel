@@ -1,4 +1,4 @@
-// DEFINISCO LA FUNAZIONE NEXT
+// DEFINISCO LA FUNZIONE NEXT E PREV
 
 function goToNextSlide(){
     if(itemActive < items.length - 1){
