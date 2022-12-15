@@ -18,6 +18,7 @@
 }
 
 .thumbnails{
+    position: relative;
     float: right;
     display: flex;
     flex-direction: column;
@@ -54,6 +55,7 @@
 }
 
 .arrow{
+    z-index: 3;
     position: absolute;
     width: 40px;
     background-color: rgba(174, 174, 174, 0.509);
@@ -115,6 +117,7 @@ button{
     border: none;
     background-color: cornflowerblue;
     color: beige;
+    cursor: pointer;
 }
 
 .info{

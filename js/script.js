@@ -5,16 +5,12 @@ function goToNextSlide(){
         
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
-        title[itemActive].classList.remove('active');
-        description[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
 
         itemActive++;
 
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
-        title[itemActive].classList.add('active');
-        description[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
 
     }
@@ -22,8 +18,6 @@ function goToNextSlide(){
 
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
-        title[itemActive].classList.remove('active');
-        description[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
 
 
@@ -31,8 +25,6 @@ function goToNextSlide(){
 
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
-        title[itemActive].classList.add('active');
-        description[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
 
     }
@@ -43,8 +35,6 @@ function goToPrevSlide(){
 
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
-        title[itemActive].classList.remove('active');
-        description[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
 
 
@@ -52,8 +42,6 @@ function goToPrevSlide(){
 
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
-        title[itemActive].classList.add('active');
-        description[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
 
     }
@@ -62,16 +50,12 @@ function goToPrevSlide(){
 
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
-        title[itemActive].classList.remove('active');
-        description[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
 
         itemActive = items.length - 1;
 
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
-        title[itemActive].classList.add('active');
-        description[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
 
     }
