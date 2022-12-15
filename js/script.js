@@ -1,14 +1,11 @@
 // DEFINISCO LA FUNZIONE NEXT E PREV
-
 function goToNextSlide(){
     if(itemActive < items.length - 1){
         
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
-
         itemActive++;
-
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
@@ -19,10 +16,7 @@ function goToNextSlide(){
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
-
-
         itemActive = 0;
-
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
@@ -36,10 +30,7 @@ function goToPrevSlide(){
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
-
-
         itemActive--;
-
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
@@ -51,9 +42,7 @@ function goToPrevSlide(){
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
         thumbnails[itemActive].classList.remove('active');
-
         itemActive = items.length - 1;
-
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
         thumbnails[itemActive].classList.add('active');
@@ -61,7 +50,7 @@ function goToPrevSlide(){
     }
 };
 
-//Creo array immagini
+//Creo array di oggetti
 const carouselObjects  = 
 [
     { 
@@ -91,7 +80,7 @@ const carouselObjects  =
     }
 ];
 
-//Creiamo dinamicamente i div con le immagini del carosello
+//Creiamo dinamicamente i div con le immagini e le info del carosello
 let itemsContent = '';
 let itemsThumbnails = '';
 
@@ -103,7 +92,6 @@ for(let i = 0; i < carouselObjects.length; i++){
         <p class="descrizione">${carouselObjects[i].intro}</p>
         </div>
     </div>`
-
     itemsThumbnails += `<div class="thumb"><img src="./img/${carouselObjects[i].img}">
     </div>`
 }
@@ -112,33 +100,23 @@ for(let i = 0; i < carouselObjects.length; i++){
 const itemsSlider = document.querySelector('.item-slider');
 itemsSlider.innerHTML += itemsContent;
 
+// thumbnails
 const thumbnailsPreview = document.querySelector('.thumbnails')
 thumbnailsPreview.innerHTML += itemsThumbnails;
 
 //Prendiamo la prima immagine dell'array e la rendiamo attiva
 
-//const items = document.querySelector('.item'); //ALTERNATIVA
-
 const items = document.getElementsByClassName('item');
-const title = document.getElementsByClassName('titolo');
-const description = document.getElementsByClassName('descrizione');
-
 let itemActive = 0;
-
 items[itemActive].classList.add('active');
-title[itemActive].classList.add('active');
-description[itemActive].classList.add('active');
 
 //rendo attivo anche il primo cerchio di navigazione
-
 const circles = document.getElementsByClassName('circle');
-
 circles[itemActive].classList.add('active');
-
 const thumbnails = document.getElementsByClassName('thumb');
 
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+const next = document.querySelector('.prev');
+const prev = document.querySelector('.next');
 
 next.addEventListener('click', function(){
     goToNextSlide();
